@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4º Exercicio - Exibir Nivel de Acordo com anos de Estudo</title>
+</head>
+
+<body>
+    <script>
+        function experiencia(anos) {
+            if (anos <= 1)
+                return 'Iniciante';
+
+            if (anos <= 3)
+                return 'Intermediário';
+
+            if (anos <= 6)
+                return 'Avançado';
+
+            if (anos >= 7)
+                return 'Jedi Master';
+        }
+
+        var anos = 7;
+
+        var resultado = experiencia(anos);
+        console.log(resultado);
+    </script>
+
+</body>
+
+</html>

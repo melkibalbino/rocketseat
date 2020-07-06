@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2º Exercicio Modulo 02</title>
+</head>
+
+<body>
+    <button id="botao">Criar Quadrado</button>
+    <div id="app">
+
+    </div>
+
+    <script>
+        var buttonElement = document.getElementById('botao');
+        var app = document.getElementById('app');
+
+        function getRadomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        buttonElement.onclick = function () {
+            var nvElement = document.createElement('div');
+
+            nvElement.style.width = '100px';
+            nvElement.style.height = '100px';
+            nvElement.style.backgroundColor = '#f00';
+
+            nvElement.onmouseover = function () {
+                nvElement.style.backgroundColor = getRadomColor();
+            }
+
+            app.appendChild(nvElement);
+
+        }
+    </script>
+
+</body>
+
+</html>

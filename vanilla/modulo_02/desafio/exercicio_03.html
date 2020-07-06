@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3º Exercicio Modulo 02</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul id="lista">
+        </ul>
+    </div>
+
+    <script>
+        var app = document.getElementById('app');
+        var ulElement = document.getElementById('lista');
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        if (nomes.length >= 1) {
+            for (nome of nomes) {
+                var liElement = document.createElement('li');
+                var texto = document.createTextNode(nome);
+
+                liElement.appendChild(texto);
+
+                ulElement.appendChild(liElement);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

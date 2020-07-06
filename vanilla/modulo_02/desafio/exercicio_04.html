@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4º Exercicio do Modulo 02</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+
+        <ul id="lista">
+        </ul>
+    </div>
+
+    <script>
+        var app = document.getElementById('app');
+        var ulElement = document.getElementById('lista');
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        function adicionar() {
+            var inputElement = document.querySelector('input[name=nome]');
+
+            var liElement = document.createElement('li');
+            var texto = document.createTextNode(inputElement.value);
+
+            inputElement.value = '';
+            liElement.appendChild(texto);
+            ulElement.appendChild(liElement);
+        }
+
+        if (nomes.length >= 1) {
+            for (nome of nomes) {
+                var liElement = document.createElement('li');
+                var texto = document.createTextNode(nome);
+
+                liElement.appendChild(texto);
+
+                ulElement.appendChild(liElement);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

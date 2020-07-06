@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1º Exercicio</title>
+</head>
+
+<body>
+    <script>
+        var endereco = {
+            rua: 'Rua Nossa Senhora da Conceição',
+            numero: 167,
+            bairro: 'Clima Bom I',
+            cidade: 'Maceió',
+            uf: 'AL'
+        };
+
+        function exibeTexto(endereco) {
+            var texto = `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`;
+            return texto;
+        }
+
+        console.log(exibeTexto(endereco));
+    </script>
+
+</body>
+
+</html>
